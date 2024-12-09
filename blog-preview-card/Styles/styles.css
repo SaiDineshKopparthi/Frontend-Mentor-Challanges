@@ -27,7 +27,7 @@
 }
 
 html {
-  font-size: 100%;
+  font-size: clamp(14px, 1vw, 16px);
 }
 
 body {
@@ -44,9 +44,8 @@ body {
 }
 
 .blog-card {
-  width: 100%;
   max-width: 24rem;
-  height: 32.625rem;
+  /* height: 32.625rem; */
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -128,22 +127,3 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 } */
-
-@media (max-width: 376px) {
-  html {
-    font-size: 14px;
-  }
-
-  .blog-card {
-    max-width: 23rem;
-    width: 100%;
-  }
-
-  .title {
-    font-size: 1.4rem;
-  }
-
-  .preview {
-    font-size: 1rem;
-  }
-}
