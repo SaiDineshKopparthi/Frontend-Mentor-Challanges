@@ -46,6 +46,7 @@ body {
 .blog-card {
   width: 100%;
   max-width: 24rem;
+  height: 32.625rem;
   background-color: white;
   display: flex;
   flex-direction: column;
