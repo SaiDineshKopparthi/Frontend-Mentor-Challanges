@@ -52,7 +52,7 @@ body {
   gap: 1.5rem;
   padding: 1.5rem;
   border-radius: 1.25rem;
-  border: 1px var(--Gray-950);
+  border: 1px solid var(--Gray-950);
   box-shadow: 8px 8px var(--Gray-950)
 }
 
