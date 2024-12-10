@@ -23,11 +23,13 @@
   --White: white;
   --Gray-950: rgb(17, 17, 17);
   --Gray-500: rgb(107, 107, 107);
-  --font-base-size: 16px;
 }
 
 html {
-  font-size: clamp(14px, 1vw, 16px);
+  font-size: clamp(0.875rem, 1vw, 1rem); 
+  /* Use `rem` so that when the user changes font-size in browser's settings, the text will be rendered properly in our website */
+  /* font-size: clamp(14px, 1vw, 16px); Using `px` will not render the fon-size according to browser's settings*/
+  /* https://fedmentor.dev/posts/font-size-px/ */
 }
 
 body {
@@ -41,6 +43,8 @@ body {
   letter-spacing: 0;
   line-height: 1.5;
   margin: 0;
+  /* font-size: clamp(0.875rem, 1vw, 1rem); */ 
+  /* The font-size can also be set inside `body{}` element as well */
 }
 
 .blog-card {
@@ -53,7 +57,7 @@ body {
   padding: 1.5rem;
   border-radius: 1.25rem;
   border: 1px solid var(--Gray-950);
-  box-shadow: 8px 8px var(--Gray-950)
+  box-shadow: 8px 8px var(--Gray-950);
 }
 
 .banner {
