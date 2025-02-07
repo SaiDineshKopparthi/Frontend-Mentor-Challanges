@@ -95,6 +95,7 @@ img {
 }
 
 .links a {
+  display: block;
   color: var(--White);
   font-size: 0.875rem;
   font-weight: 600;
@@ -104,13 +105,13 @@ img {
 
 .links li:hover,
 .links li:active,
-.links li:focus {
+.links li:focus-visible {
   background-color: var(--Green);
 }
 
 .links li:hover a,
 .links li:active a,
-.links li:focus a{
+.links li:focus-visible a{
   color: var(--Gray-700);
 }
 
