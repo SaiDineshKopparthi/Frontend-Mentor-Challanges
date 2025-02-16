@@ -107,29 +107,98 @@ body {
   margin: 0;
 }
 
+/* Existing CSS remains the same until the #recipe section */
+
 #recipe {
   background-color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 46rem; /*CLAMP*/
-  padding: 2.5rem; /*CLAMP*/
-  gap: 2.5rem; /*CLAMP*/
-  margin-top: 8rem; /*CLAMP*/
-  margin-bottom: 8rem;
-  border-radius: 1.5rem; /*CLAMP*/
+  max-width: clamp(23rem, 46rem, 46rem); /* Fluid width */
+  padding: clamp(0rem, 2.5rem, 2.5rem); /* Fluid padding */
+  gap: clamp(0rem, 2.5rem, 2.5rem); /* Fluid gap */
+  margin-top: clamp(0rem, 8rem, 8rem); /* Fluid margin-top */
+  margin-bottom: clamp(0rem, 8rem, 8rem); /* Fluid margin-bottom */
+  border-radius: clamp(0rem, 1.5rem, 1.5rem); /* Fluid border-radius */
 }
 
 img {
-  max-width: 41rem; /*CLAMP*/
-  border-radius: 0.75rem; /*CLAMP*/
+  max-width: clamp(23.4375rem, 41rem, 41rem); /* Fluid width */
+  border-radius: clamp(0rem, 0.75rem, 0.75rem); /* Fluid border-radius */
 }
 
 #content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 0; /* Default padding */
+}
+
+/* Media Queries for Specific Breakpoints */
+
+@media (max-width: 1440px) {
+  #recipe {
+    max-width: 46rem;
+    padding: 2.5rem;
+    gap: 2.5rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    border-radius: 1.5rem;
+  }
+
+  img {
+    max-width: 41rem;
+    border-radius: 0.75rem;
+  }
+
+  #content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #recipe {
+    max-width: 38.5rem; /* 616px */
+    padding: 2.5rem;
+    gap: 2.5rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    border-radius: 1.5rem;
+  }
+
+  img {
+    max-width: 33.5rem; /* 536px */
+    border-radius: 0.75rem;
+  }
+
+  #content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 376px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  #recipe {
+    max-width: 23.4375rem; /* 375px */
+    padding: 0;
+    gap: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  img {
+    max-width: 23.4375rem; /* 375px */
+    border-radius: 0;
+  }
+
+  #content {
+    padding: 2.5rem 2rem; /* 40px top-bottom, 32px left-right */
+  }
 }
 
 .sections {
@@ -157,8 +226,8 @@ ol li {
 }
 
 ul li::marker {
-font-size: 0.75rem;
-color: var(--brown-800);
+  font-size: 0.75rem;
+  color: var(--brown-800);
 }
 
 table {
