@@ -35,13 +35,13 @@ body {
   width: clamp(20.4375rem, 60vw, 24rem);
   /* height: clamp(579px, 80vh, 611px); */
   padding: clamp(1.5rem, 6vw, 2.5rem);
+  /* padding: 2.5rem; */
   border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  padding: 2.5rem;
 }
 
 img {

@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "YoungSerif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/static/Outfit-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/static/Outfit-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/static/Outfit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ROSE */
+  --rose-800: rgb(122, 40, 78);
+  --rose-50: rgb(255, 247, 251);
+
+  /* STONE */
+  --stone-900: rgb(49, 46, 44);
+  --stone-600: rgb(95, 86, 77);
+  --stone-150: rgb(227, 221, 215);
+  --stone-100: rgb(243, 229, 215);
+
+  /* BROWN */
+  --brown-800: rgb(137, 70, 50);
+
+  /* WHITE */
+  --white: rgb(255, 255, 255);
+}
+
+h1 {
+  font-family: "YoungSerif", sans-serif;
+  font-size: 2.5rem;
+  color: var(--stone-900);
+  line-height: 1;
+}
+
+h2 {
+  font-family: "YoungSerif", sans-serif;
+  font-size: 1.75rem;
+  color: var(--brown-800);
+  line-height: 1;
+}
+
+h3 {
+  font-family: "Outfit";
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--rose-800);
+  line-height: 1;
+}
+
+p,
+li,
+th.col-1 {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--stone-600);
+  line-height: 1.5;
+}
+
+td.col-2,
+ol li::marker {
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--brown-800);
+  line-height: 1.5;
+}
+
+body {
+  font-size: 1rem;
+  background-color: var(--stone-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+#recipe {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 46rem; /*CLAMP*/
+  padding: 2.5rem; /*CLAMP*/
+  gap: 2.5rem; /*CLAMP*/
+  margin-top: 8rem; /*CLAMP*/
+  margin-bottom: 8rem;
+  border-radius: 1.5rem; /*CLAMP*/
+}
+
+img {
+  max-width: 41rem; /*CLAMP*/
+  border-radius: 0.75rem; /*CLAMP*/
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#prep-time {
+  background-color: var(--rose-50);
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  gap: 0.5rem;
+}
+
+ul li,
+ol li {
+  padding-left: 1rem;
+}
+
+ul li::marker {
+font-size: 0.75rem;
+color: var(--brown-800);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  padding: 0.75rem 1.5rem;
+}
+
+table tr {
+  text-align: left;
+  border-bottom: 1px solid var(--stone-150);
+}
+
+table tr:first-child th,
+table tr:first-child td {
+  padding-top: 0rem;
+}
+
+table tr:last-child th,
+table tr:last-child td {
+  padding-top: 0rem;
+}
+
+table tr:last-child {
+  border-bottom: none;
+}
+
+hr {
+  color: var(--stone-150);
+  background-color: var(--stone-150);
+  height: 1px;
+  border: none;
+}
