@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/static/Outfit-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/static/Outfit-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/static/Outfit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -15,8 +37,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  font-size: 0.875rem;
+  font-family: "Outfit";
   background-color: var(--Gray-900);
   display: flex;
   flex-direction: column;
@@ -30,12 +51,8 @@ body {
 
 .profile {
   background-color: var(--Gray-800);
-  /* max-width: 24rem;
-  width: 100%; */
   width: clamp(20.4375rem, 60vw, 24rem);
-  /* height: clamp(579px, 80vh, 611px); */
   padding: clamp(1.5rem, 6vw, 2.5rem);
-  /* padding: 2.5rem; */
   border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -59,18 +76,22 @@ img {
 }
 
 .info h1 {
-  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 1.75rem;
   color: var(--White);
 }
 
 .info p {
-  font-size: 0.875rem;
+  font-weight: 700;
+  font-size: 1.25rem;
   color: var(--Green);
 }
 
 .bio {
-  font-size: 0.875rem;
   font-weight: 400;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
   color: var(--White);
 }
 
@@ -85,26 +106,6 @@ img {
   gap: 1rem;
 }
 
-/* .links li {
-  width: 100%;
-  border-radius: 0.5rem;
-  padding: 0.75rem 0;
-  text-align: center;
-  background-color: var(--Gray-700);
-  transition: background-color 0.3s ease-in-out 0.1s;
-}
-
-.links a {
-  display: block;
-  color: var(--White);
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  width: 100%;
-  padding: 0;
-  transition: color 0.3s ease-in-out 0.1s;
-} */
-
 .links li {
   width: 100%;
   border-radius: 0.5rem;
@@ -117,8 +118,8 @@ img {
   align-items: center;
   justify-content: center;
   color: var(--White);
-  font-size: 0.875rem;
   font-weight: 600;
+  font-size: 1rem;
   text-decoration: none;
   width: 100%;
   padding: 0.75rem 0;
@@ -144,12 +145,3 @@ img {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   outline: none;
 }
-
-/* .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-} */
